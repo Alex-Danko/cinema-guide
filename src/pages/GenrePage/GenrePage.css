@@ -1,0 +1,36 @@
+.genre-page {
+    padding-top: 64px;
+}
+
+.genre-back {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: color .3s ease-in-out;
+}
+
+.genre-back svg {
+    display: block;
+}
+
+.genre-back svg path {
+    transition: fill .3s ease-in-out;
+}
+
+.genre-back:hover {
+    color: #B4A9FF;
+}
+
+.genre-back:hover svg path {
+    fill: #B4A9FF;
+}
+
+@media (max-width: 768px) {
+    .genre-page {
+        padding-top: 16px;
+    }
+
+    .genre-back {
+        margin-bottom: 40px;
+    }
+}

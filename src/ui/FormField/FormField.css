@@ -1,0 +1,83 @@
+.form-field,
+.form-field:has(.form-field-wrapper>input:active) {
+  cursor: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  text-align: left;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.4);;
+  padding: 16px;
+  transition: border .3s ease-in-out;
+}
+
+.form-field:hover,
+.form-field:focus-visible {
+  border: 1px solid #B4A9FF;
+}
+
+.form-field:hover>.form-field-wrapper>svg>path,
+.form-field:focus-visible>.form-field-wrapper>path {
+  fill: #B4A9FF;
+}
+
+.form-field-invalid,
+.form-field-invalid:hover,
+.form-field-invalid:focus-visible {
+  border: 1px solid #FF7575;
+}
+
+.form-field-invalid>.form-field-wrapper>svg>path,
+.form-field-invalid:hover>.form-field-wrapper>svg>path,
+.form-field-invalid:focus-visible>.form-field-wrapper>svg>path {
+  fill: #FF7575;
+}
+
+.form-field__error-text {
+  color: #FF7575;
+  font-size: 10px;
+}
+
+.form-field-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.form-field-wrapper>input,
+.form-field>textarea {
+  color: #000;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.form-field-wrapper>input::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.form-field-wrapper>svg {
+  display: block;
+}
+.form-field-wrapper>svg>path {
+  fill: rgba(0, 0, 0, 0.4);
+  transition: fill .3s ease-in-out;
+}
+
+.form-field:focus-within>input,
+.form-field:focus-within>textarea {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-field>input:invalid,
+.form-field>textarea:invalid {
+  border-color: var(--error);
+}

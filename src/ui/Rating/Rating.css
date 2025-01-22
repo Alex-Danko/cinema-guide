@@ -1,0 +1,46 @@
+.rating {
+    max-width: 70px;
+    display: flex;
+    align-items: center;
+    padding: 4px 12px;
+    gap: 4px;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.rating svg {
+    display: block;
+}
+
+.rating-gold {
+    background-color: #A59400;
+}
+
+.rating-green {
+    background-color: #308E21;
+}
+
+.rating-grey {
+    background-color: #777;
+}
+
+.rating-red {
+    background-color: #C82020;
+}
+
+.rating-search {
+    max-width: 47px;
+    display: flex;
+    align-items: center;
+    padding: 2px 8px;
+    gap: 4px;
+    border-radius: 16px;
+    
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+}

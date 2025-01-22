@@ -1,0 +1,337 @@
+html {
+  box-sizing: border-box;
+  background: linear-gradient(178.73deg, rgba(39, 135, 245, 0.18) -17.53%, rgba(163, 147, 245, 0.18) 131.74%), linear-gradient(180deg, #000000 15%, rgba(39, 36, 36, 1) 90%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Play';
+  src: local('Play'), local('Play-Regular'),
+    url('./assets/fonts/Play.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Play';
+  src: local('Play Bold'), local('Play-Bold'),
+    url('./assets/fonts/Play-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a[aria-current="page"] {
+  margin-bottom: -1px;
+  border-bottom: 1px solid #DC5DFC;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Play', sans-serif;
+  font-weight: 400;
+
+}
+
+.section {
+  padding-bottom: 120px;
+}
+
+.App {
+  text-align: center;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 80px;
+  color: #fff;
+}
+
+.section {
+  flex: 1;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* UI */
+
+.primary-btn {
+  cursor: pointer;
+  padding: 16px 48px;
+  border-radius: 28px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFF;
+  background: #393B3C;
+  border: none;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+
+.primary-btn-blue {
+  background-color: #67A5EB;
+}
+
+.primary-btn-svg {
+  padding: 16px 22px;
+}
+
+.primary-btn-svg svg path {
+  transition: fill .3s ease-in;
+}
+
+.primary-btn-svg:hover svg path {
+  fill: #000;
+}
+
+
+
+.primary-btn:focus-visible {
+  background-color: #fff;
+  color: #000;
+}
+
+.primary-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* header & some navigation */
+
+.nav-menu {
+  display: flex;
+  padding: 24px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-white img {
+  display: block;
+}
+
+.nav-menu-middle {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.menu-link {
+  padding: 8px 0;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  transition: color .3s ease-in-out;
+}
+
+.menu-link:hover {
+  color: #B4A9FF;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: end;
+  padding: 42px 0;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-socials-link svg {
+  display: block;
+}
+
+.footer-socials-link>svg>path {
+  transition: fill .3s ease-in-out;
+}
+
+.footer-socials-link:hover>svg>path {
+  fill: #B4A9FF;
+}
+
+.footer-socials-link>svg>rect {
+  transition: stroke .3s ease-in-out;
+}
+
+.footer-socials-link:hover>svg>rect {
+  stroke: #B4A9FF;
+}
+
+
+/* lists of Movies */
+
+.r-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(112px, 224px));
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  grid-gap: 64px 40px;
+  justify-content: space-between;
+}
+
+.r-list div {
+  aspect-ratio: 2 / 3;
+}
+
+.search-wrapper {
+  width: 655px;
+  position: relative;
+}
+
+/* responsiveness */
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .r-list {
+    grid-gap: 32px 20px;
+  }
+
+  .r-list {
+    grid-gap: 32px 20px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .upper-banner {
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .upper-banner div {
+    width: 100%;
+  }
+
+  .menu-link-home {
+    display: none;
+  }
+
+  .search-wrapper {
+    width: 500px;
+  }
+
+}
+
+/* логично предполагаем, что любое разрешение экрана ниже 1024 уже планшет либо смартфон, понемногу переходим к мобильной версии */
+
+@media (max-width: 1024px) {
+  .search-wrapper {
+    width: 320px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .r-list {
+    grid-template-columns: repeat(2, minmax(224px, 452px));
+    grid-gap: 64px 40px;
+  }
+
+  .g-list {
+    grid-template-columns: repeat(2, minmax(290px, 452px));
+  }
+
+  .movie-card-container {
+    width: 100%;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-bottom: 40px;
+  }
+
+  .main-container {
+    gap: 56px;
+  }
+
+  .primary-btn {
+    padding: 16px 38px; 
+  }
+
+  .primary-btn-svg {
+    padding: 16px 22px;
+  }
+
+  .nav-menu {
+    padding: 16px 0;
+  }
+
+  .nav-menu-middle {
+    padding: 4px 0;
+    gap: 20px;;
+  }
+
+  .menu-link {
+    padding: 0;
+  }
+
+  .menu-link svg {
+    display: block;
+  }
+
+  a[aria-current="page"] {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+
+  .r-list-genre {
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(224px, 452px));
+    grid-gap: 24px 0;
+    justify-content: center;
+  }
+
+  .g-list {
+    grid-template-columns: repeat(1, minmax(290px, 452px));
+  }
+
+  .footer {
+    padding: 24px 0;
+  }
+
+}

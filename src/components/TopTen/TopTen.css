@@ -1,0 +1,32 @@
+.top10-title {
+    display: block;
+    margin: 0;
+    margin-bottom: 64px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+@media (max-width: 768px) {
+    .top10-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 0;
+    }
+
+    .r-list-top10 {
+        display: flex;
+        margin-bottom: -40px;
+        padding: 40px 0 32px 20px;
+        overflow-x: scroll;
+        gap: 40px;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+    }
+
+    .r-list-top10 .movie-card-container {
+        min-width: 224px;
+        box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.33);
+    }
+}

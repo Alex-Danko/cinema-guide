@@ -1,0 +1,79 @@
+.account-page {
+    padding-top: 64px;
+}
+
+.account-page-title {
+    margin: 0;
+    margin-bottom: 64px;
+    padding: 0px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+}
+
+.account-page-switches {
+    margin-bottom: 64px;
+    display: flex;
+    gap: 64px;
+}
+
+.account-page-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    padding: 0 0 8px;
+    font-family: 'Play';
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    transition: color .3s ease-in-out;
+}
+
+.account-page-switch svg {
+    display: block
+}
+
+.account-page-switch>svg>path {
+    fill: #fff;
+    transition: fill .3s ease-in-out;
+}
+
+.account-page-switch:hover {
+    color: #B4A9FF;
+}
+
+.account-page-switch:hover>svg>path {
+    fill: #B4A9FF;
+
+}
+
+.account-page-switch-u {
+    margin-bottom: -1px;
+    border-bottom: 1px solid #DC5DFC;
+}
+
+@media (max-width: 768px) {
+    .account-page {
+        padding-top: 16px;
+    }
+
+    .account-page-title {
+        margin-bottom: 40px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .account-page-switches {
+        margin-bottom: 0;
+        gap: 24px
+    }
+
+    .user-info {
+        padding: 40px 0;
+    }
+}

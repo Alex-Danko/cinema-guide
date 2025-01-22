@@ -1,0 +1,35 @@
+.search-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 16px 20px 0 20px;
+}
+
+.search-modal-close {
+    position: absolute;
+    top: 32px;
+    right: 36px;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.search-modal div {
+    width: 100%;
+
+}
+
+.search-modal div input {
+    padding: 16px 52px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.search-modal div ul {
+    width: 100%;
+    top: 66px;
+}
